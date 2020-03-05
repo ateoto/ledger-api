@@ -9,10 +9,8 @@ services:
       - backend
     ports:
       - "5432:5432"
-    environment:
-      POSTGRES_USER: ledgerdb
-      POSTGRES_DB: ledger
-      POSTGRES_PASSWORD: ledgerdbpass
+    env_file:
+      local.env
 
   admin:
     image: dpage/pgadmin4:latest
@@ -20,9 +18,8 @@ services:
       - backend
     ports:
       - "9999:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: mattmccants@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: donotsharethis
+    env_file:
+      local.env
 
 networks:
   backend:
