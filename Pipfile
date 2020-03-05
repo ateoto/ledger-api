@@ -6,16 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+fastapi = "*"
 sqlalchemy = "*"
 alembic = "*"
 psycopg2-binary = "*"
 uvicorn = "*"
 python-slugify = "*"
 python-multipart = "*"
-slugify = "*"
 inflection = "*"
 tenacity = "*"
-fastapi = "*"
 
 [requires]
 python_version = "3.8"
