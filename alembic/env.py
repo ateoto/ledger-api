@@ -1,5 +1,6 @@
 import os
 import sys
+from pathlib import Path
 
 
 sys.path.append(os.getcwd())
@@ -13,7 +14,7 @@ from sqlalchemy import pool
 from alembic import context
 
 
-from ledger.models import Base
+from ledger.db.base_class import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -33,6 +34,25 @@ target_metadata = Base.metadata
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
+
+cwd = Path(__file__).resolve().parent
+
+env_file = Path(cwd.parent.parent, "local.env")
+
+with env_file.open() as env_file_obj:
+    for line in env_file_obj:
+        key, value = line.split(":")
+        os.environ[key.strip()] = value.strip()
+
+
+pg_user = os.getenv("POSTGRES_USER")
+pg_pass = os.getenv("POSTGRES_PASSWORD")
+pg_db = os.getenv("POSTGRES_DB")
+pg_host = os.getenv("POSTGRES_HOST", "localhost")
+
+database_url = f"postgresql://{pg_user}:{pg_pass}@{pg_host}:5432/{pg_db}"
+
+config.set_main_option('sqlalchemy.url', database_url)
 
 
 def run_migrations_offline():
