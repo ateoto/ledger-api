@@ -22,8 +22,6 @@ pg_host = os.getenv("POSTGRES_HOST", "localhost")
 
 SQLALCHEMY_DATABASE_URL = f"postgresql://{pg_user}:{pg_pass}@{pg_host}:5432/{pg_db}"
 
-
-print(SQLALCHEMY_DATABASE_URL)
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 db_session = scoped_session(
     sessionmaker(autocommit=False, autoflush=False, bind=engine)

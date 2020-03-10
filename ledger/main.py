@@ -40,4 +40,4 @@ def parse_transactions_file(file: UploadFile = File(...), db: Session = Depends(
             print(f"{line}")
 
     os.remove(file.filename)
-"""
+""
