@@ -16,6 +16,8 @@ python-multipart = "*"
 inflection = "*"
 tenacity = "*"
 plaid-python = "*"
+requests = "*"
+python-jose = "*"
 
 [requires]
 python_version = "3.8"
