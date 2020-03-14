@@ -19,6 +19,8 @@ plaid-python = "*"
 requests = "*"
 python-jose = "*"
 pydantic = {extras = ["email"],version = "*"}
+boto3 = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"
