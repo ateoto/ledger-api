@@ -13,4 +13,4 @@ router = APIRouter()
 
 @router.get("/")
 def read_item():
-    return {"Not": "Implemented"}
+    return {"detail": "Not Implemented"}

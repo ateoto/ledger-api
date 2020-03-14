@@ -1,7 +1,7 @@
 import os
 
 import requests
-from dotenv import load_dotenv
+
 from fastapi import Depends, HTTPException
 from starlette.status import HTTP_403_FORBIDDEN
 

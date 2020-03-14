@@ -18,6 +18,7 @@ tenacity = "*"
 plaid-python = "*"
 requests = "*"
 python-jose = "*"
+pydantic = {extras = ["email"],version = "*"}
 
 [requires]
 python_version = "3.8"

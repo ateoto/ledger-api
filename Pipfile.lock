@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c48744341cac169654f7fec766a677198d743321198bb14df712e21a080197ff"
+            "sha256": "33878c937ff58adc35bc3b0d17dc9e6840f9e40544acb9aa1f48657d42bbc4b3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,12 +44,25 @@
             ],
             "version": "==7.1.1"
         },
+        "dnspython": {
+            "hashes": [
+                "sha256:36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01",
+                "sha256:f69c21288a962f4da86e56c4905b49d11aba7938d3d740e80d9e366ee4f1632d"
+            ],
+            "version": "==1.16.0"
+        },
         "ecdsa": {
             "hashes": [
                 "sha256:867ec9cf6df0b03addc8ef66b56359643cb5d0c1dc329df76ba7ecfe256c8061",
                 "sha256:8f12ac317f8a1318efa75757ef0a651abe12e51fc1af8838fb91079445227277"
             ],
             "version": "==0.15"
+        },
+        "email-validator": {
+            "hashes": [
+                "sha256:e3e6ede1765d7c1e580d2050d834b2689361f7da2d50ce74df6a5968fca7cb13"
+            ],
+            "version": "==1.0.5"
         },
         "fastapi": {
             "hashes": [
@@ -196,6 +209,9 @@
             "version": "==0.4.8"
         },
         "pydantic": {
+            "extras": [
+                "email"
+            ],
             "hashes": [
                 "sha256:012c422859bac2e03ab3151ea6624fecf0e249486be7eb8c6ee69c91740c6752",
                 "sha256:07911aab70f3bc52bb845ce1748569c5e70478ac977e106a150dd9d0465ebf04",
@@ -212,6 +228,7 @@
                 "sha256:f17ec336e64d4583311249fb179528e9a2c27c8a2eaf590ec6ec2c6dece7cb3f",
                 "sha256:f863456d3d4bf817f2e5248553dee3974c5dc796f48e6ddb599383570f4215ac"
             ],
+            "index": "pypi",
             "version": "==1.4"
         },
         "python-dateutil": {
